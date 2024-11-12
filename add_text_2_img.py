@@ -28,7 +28,7 @@ class AddText:
                 "text": ("STRING", {"multiline": True, "default": "A cute puppy"}),
                 "x": ("INT", {"default": 0, "min": 0, "max": 4096, "step": 1, "display": "number"}),
                 "y": ("INT", {"default": 0, "min": 0, "max": 4096, "step": 1, "display": "number"}),
-                "font_size": ("INT", {"default": 38, "min": 0, "max": 100, "step": 1, "display": "number"}),
+                "font_size": ("INT", {"default": 38, "min": 0, "max": 1000, "step": 1, "display": "number"}),
                 "font_family": (available_fonts,),
                 "font_color": ("STRING", {"multiline": False, "default": "#ffffff"}),
                 "font_shadow_x": ("INT", {"default": 0, "min": 0, "max": 20, "step": 1, "display": "number"}),
