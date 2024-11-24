@@ -1,27 +1,26 @@
-# 使用
-- 节点位置：Add Node / AI_Boy / AddTextToImage
+# How to Use
+- Node location：Add Node / AI_Boy / AddTextToImage
 
 ![img_1.png](assets/img.png)
 
 ![img_1.png](assets/img_1.png)
 
-# 字体
-其中，_fonts_ 文件夹（如果需要指定自定义字体，则将字体文件放在当前节点的 _fonts_ 目录下）中存放的是本地字体文件，即文案展示时的字体样式，该字体文件非必须，可以在节点的`custom_font_path`中直接指定字体的路径。支持的字体格式后缀为`.ttf/.TTF/.ttc/.TTC`
-
-# 节点属性
-| 属性               | 描述                                                   | 必须                                                                                                                                                       |
+# Font
+in，_fonts_ Folders（If you need to specify a custom font, place the font file in the _fonts_ directory of the current node）The local font file is stored in the `custom_font_path` node, which is the font style of the text display. The font file is not required. The font path can be directly specified in the node's `custom_font_path`. The supported font format suffixes are `.ttf/.TTF/.ttc/.TTC`
+# Node properties
+| property               | describe                                                   | must                                                                                                                                                       |
 |------------------|------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| image            | 节点的输入类型必须为image                                      | 是                                                                                                                                                        |
-| IMAGE            | 节点的输出类型为IMAGE                                        | 是                                                                                                                                                        |
-| x                | 文案展示在图片x轴坐标的位置                                       | 否。默认位于图片正下方                                                                                                                                              |
-| y                | 文案展示在图片y轴坐标的位置                                       | 否。默认位于图片正下方                                                                                                                                              |
-| font_size        | 字体大小                                                 | 是                                                                                                                                                        |
-| font_family      | 字体样式                                                 | 是。<br/> 如果 fonts 文件夹下有字体，则可以选择 fonts 文件夹（comfyui/custom_nodes/fonts）中的字体。当该属性的值为 "Custom" 时，需要指定 "custom_font_path" 属性的值                                                           |
-| custom_font_path | 字体路径，如指定windows中自带的字体路径 "C:\Windows\Fonts\SIMLI.TTF" | 否。<br/> 当 "font_family"="Custom" 时，需要指定 "custom_font_path" 属性的值                                                                                          |
-| font_color       | 字体颜色，支持RGB格式(255,255,255)、十六进制格式(#000000)            | 是。默认为 "#ffffff"，即白色                                                                                                                                      |
-| font_shadow_x    | 字体阴影x轴偏移量                                            | 否。默认为0                                                                                                                                                   |
-| font_shadow_y    | 字体阴影y轴偏移量                                            | 否。默认为0                                                                                                                                                   |
-| shadow_color     | 字体阴影颜色                                               | 否。<br/> 当属性 "font_shadow_x"=0 并且属性 "font_shadow_y"=0 时，该属性不生效。 <br/> 当属性 "font_shadow_x" 与 属性 "font_shadow_y" 有一个不为0时，该属性生效，且需要指定该属性的值。默认为 "#000000"，即黑色 |
+| image            | The node's input type must be image                                      | 是                                                                                                                                                        |
+| IMAGE            | The output type of the node is IMAGE                                        | 是                                                                                                                                                        |
+| x                | The text is displayed at the y-axis coordinate of the image                                       | No. By default it is located directly below the image                                                                                                                                          |
+| y                | The text is displayed at the y-axis coordinate of the image                                       | No. By default it is located directly below the image                                                                                                                                              |
+| font_size        | Font size                                                 | yes                                                                                                                                                        |
+| font_family      | Font Style                                                 | Yes. <br/> If there are fonts in the fonts folder, you can select the fonts in the fonts folder (comfyui/custom_nodes/fonts). When the value of this property is "Custom", you need to specify the value of the "custom_font_path" property                                                           |
+| custom_font_path | Font path, such as specifying the font path that comes with Windows "C:\Windows\Fonts\SIMLI.TTF"| No. <br/> When "font_family"="Custom", you need to specify a value for the "custom_font_path" attribute                                                                                          |
+| font_color       | Font color, supports RGB format (255,255,255) and hexadecimal format(#000000)            | Yes. Default is "#ffffff", which is white.                                                                                                                                      |
+| font_shadow_x    | Font shadow x-axis offset                                            | No. Default is 0                                                                                                                                                  |
+| font_shadow_y    | Font shadow x-axis offset                                            | No. Default is 0                                                                                                                                                |
+| shadow_color     | Font shadow color                                               | No. <br/> When the attribute "font_shadow_x"=0 and the attribute "font_shadow_y"=0, this attribute is not effective. <br/> When one of the attributes "font_shadow_x" and "font_shadow_y" is not 0, this attribute is effective and the value of this attribute needs to be specified. The default value is "#000000", which is black. |
 
-# 安装
-将该仓库克隆到 ComfyUI 的 custom_nodes 目录下，然后重启 ComfyUI。
+# Install
+Clone the repository into the custom_nodes directory of ComfyUI, and then restart ComfyUI.
